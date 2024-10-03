@@ -1,1 +1,3 @@
-public class HouseKeeping
+public class HouseKeeping implements HotelService {
+    
+}
