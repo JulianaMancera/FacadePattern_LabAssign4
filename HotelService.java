@@ -1,4 +1,3 @@
 public interface HotelService {
 
-    void performService();
-}
+    void performService(); 
