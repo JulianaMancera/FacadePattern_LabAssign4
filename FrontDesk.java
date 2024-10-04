@@ -1,17 +1,17 @@
-public class FrontDesk{
-    public void requestValetService(String plateNumber){
-        Valet valet = new Valet(plateNumber);
+public class FrontDesk {
+    private Valet valet;
+    private HouseKeeping housekeeping;
+    private Cart cart;
+
+    public FrontDesk(Valet valet, HouseKeeping housekeeping, Cart cart) {
+        this.valet = valet;
+        this.housekeeping = housekeeping;
+        this.cart = cart;
+    }
+
+    public void provideHotelServices() {
         valet.performService();
+        housekeeping.performService();
+        cart.performService();
     }
-
-    public void requesHouseKeepingService(String roomNumber){
-        HouseKeeping HouseKeeping = new HouseKeeping (roomNumber);
-            HouseKeeping.performService();
-    }
-
-    public void requestCartService(int numberOfCarts){
-        Cart cart = new Cart(numberOfCarts);
-            cart.performService();
-    }
-
 }
