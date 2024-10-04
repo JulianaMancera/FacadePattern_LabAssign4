@@ -1,11 +1,17 @@
 public class Valet implements HotelService{
 
-    public void pickUpVehicle(String plateNumber){
-        System.out.println("Valet is picking up vehicle with plate number: "+plateNumber);
+    private String plateNumber; 
+
+    public Valet(String plateNumber){
+        this.plateNumber = plateNumber;
     }
 
     @Override 
     public void performService(){
-        System.out.println("Performing valet service.");
+        pickUpVehicle(plateNumber);
+    }
+
+    public void pickUpVehicle(String plateNumber){
+        System.out.println("Vehicle with plate "+plateNumber+" has been picked up by the valet.");
     }
 }
